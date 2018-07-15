@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        html{
+            min-height:100%;
+        }
+    </style>
+</head>
+<body>
+<nav class="nav navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Dpaste</a>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a class="nav navbar-nav navbar-right" href="{% url 'dpasteapp:dpaste_about' %}">  ABOUT  </a></li>
+            <li><a class="nav navbar-nav navbar-right" href="{% url 'dpasteapp:dpastelist' %}">  HISTORY  </a></li>
+            <li><a class="nav navbar-nav navbar-right" href="{% url 'dpasteapp:dpaste_form' %}" >  NEW  </a></li>
+        </ul>
+    </div>
+</nav>
+{% block content %}
+{% endblock %}
+<footer class="small pt-4 mt-4">
+    <center><p class="text-muted">By M.M.Lakshmi Priya</p></center>
+</footer>
+</body>
+</html>

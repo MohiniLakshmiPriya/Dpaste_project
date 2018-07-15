@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+{% extends '_base.html' %}
+{% block content %}
+<div class="container">
+    <label>Content  : </label>
+    <textarea class="form-control" rows="7" readonly>{{data}}</textarea><br>
+    {% if img.url != '/media/templates/upload_pictures/noimage.png' or video.url != '/media/templates/upload_pictures/no-video.jpg'%}
+    <label> Images/Videos :</label><br>
+    <div align = "center">
+    {% if img.url != '/media/templates/upload_pictures/noimage.png' %}
+                    <img src="{{ img.url }}" width="250" height="250" hspace="20" align = "left">
+    {% endif %}
+    {% if video.url != '/media/templates/upload_pictures/no-video.jpg' %}
+                    <video width="320" height="250" controls>
+                            <source src="{{ video.url }}" type="video/mp4">
+                    </video>
+    {% endif %}
+        {% endif %}
+        </div>
+    <hr>
+    <h4 align = "center">{{expiry}}</h4>
+</div>
+{% endblock %}
+</body>
+</html>

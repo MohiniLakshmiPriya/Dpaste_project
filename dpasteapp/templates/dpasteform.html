@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<body>
+{% extends '_base.html' %}
+{% block content %}
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div class="col-sm-6 col-xs-12">
+            <div class="input-group row">
+                <label>Content:</label>
+                {{form.content}}
+            </div>
+            <br>
+            <div class="input-group row">
+                <label>Type:
+                {{form.language}}</label>
+            </div>
+            <br>
+             <div class="input-group row">
+                <label>Image:
+                 {{form.image}}</label>
+            </div>
+            <br>
+            <div class="input-group row">
+                <label>Video:
+                 {{form.video}}</label>
+            </div>
+            <br>
+            <div class="input-group row">
+                <label>Title:</label>
+                {{form.title}}
+            </div>
+            <br>
+            <div class="input-group row">
+                <label>Name:</label>
+                {{form.user}}
+            </div>
+            <br>
+            <div class="input-group row">
+                <label>Expiry:
+                {{form.expiry}}</label>
+            </div>
+            <br>
+        <div class="row">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+</body>
+</html>

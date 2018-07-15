@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+{% extends "_base.html" %}
+
+{% block content %}
+<h1>Your Links</h1>
+    <div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th>Title</th>
+            <th>CreatedOn</th>
+            <th>LifeTime</th>
+            <th>Link</th>
+        </tr>
+        </thead>
+        {% for s in list %}
+            <tr>
+                <td>{{s.title}}</td>
+                <td>{{ s.created }} UTC</td>
+                <td>{{s.expiry}} Days</td>
+                {% if s.link is None %}
+                    <td>Expired</td>
+                {% else %}
+                    <td><a href="/{{s.link}}">{{s.link}}</a></td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+    </div>
+        {% endblock %}
+</body>
+</html>

@@ -1,0 +1,20 @@
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a href="" class="navbar-brand"><h1>Dpaste</h1></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto"  style="text-align:center;">
+            <li class="nav-item"><a href="{% url 'dpasteapp:dpaste_form' %}" class="nav-link">New</a></li>
+            <li class="nav-item"><a href="{% url 'dpasteapp:dpastelist' %}" class="nav-link">History</a></li>
+        </ul>
+    </div>
+</nav>
+<center>
+{% block content %} {% endblock %}
+</center>
+<footer class="small pt-4 mt-4">
+    <center><p class="text-muted">By M.M.Lakshmi Priya</p></center>
+</footer>
+</body>
