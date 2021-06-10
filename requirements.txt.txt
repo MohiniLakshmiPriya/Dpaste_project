@@ -3,7 +3,7 @@ attrs==18.1.0
 awsebcli==3.14.2
 backcall==0.1.0
 beautifulsoup4==4.5.3
-Django==2.0.5
+Django==2.2.24
 django-debug-toolbar==1.9.1
 django-webpack-loader==0.6.0
 djangorestframework==3.8.2
